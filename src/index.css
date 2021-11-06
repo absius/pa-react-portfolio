@@ -1,0 +1,433 @@
+/* Global settings for the page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 80px; /* height of sticky header */
+}
+
+:root {
+  --main-text-color: lightseagreen;
+  --light-text-color: lightgrey;
+  --background-color: darkslategray;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--main-text-color);
+  background-color: var(--light-text-color);
+}
+
+button {
+  background: var(--primary);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding: 10px 15px;
+}
+form {
+  width: 40%;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.25rem;
+  border: 1px solid var(--dark);
+  outline: none;
+  border-radius: 3px;
+  transition: box-shadow 0.2s;
+}
+
+input:focus {
+  border: 1px solid var(--secondary);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+li {
+  list-style: none;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+nav li {
+  cursor: pointer;
+}
+
+textarea {
+  width: 600px;
+  height: 120px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+}
+.mobile-heading {
+  display: none;
+}
+
+h3 {
+  flex: 0 100%;
+  color: var(--light-text-color);
+  padding-left: 30%;
+  background-color: blue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h2::before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
+}
+
+h2 {
+  text-align: left;
+  color: darkslateblue;
+}
+
+.column-left {
+  border-right: 2px solid darkslateblue;
+  padding-right: 115px;
+  margin-right: 25px;
+  width: 100px;
+}
+
+.column-right {
+  width: 90%;
+}
+
+/* Header Section */
+
+header {
+  padding: 20px 35px;
+  background-color: darkslateblue;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: 9999;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--light-text-color);
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--light-text-color);
+}
+
+header a:hover {
+  background-color: var(--main-text-color);
+}
+
+header nav {
+  margin: 7px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.circle {
+  background-color: blue;
+  position: absolute;
+  right: 0;
+  bottom: 25%;
+  height: 70px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.hero h2 {
+  margin-top: 25px;
+  color: floralwhite;
+}
+
+/* About Me Section */
+
+.about-me {
+  font-size: larger;
+  margin-bottom: 20px;
+  background-color: floralwhite;
+  color: darkslateblue;
+  display: flex;
+}
+
+/* Projects section */
+
+.projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+}
+
+.projects img {
+  height: 200px;
+  width: 700px;
+}
+
+.larger {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.projects {
+  display: flex;
+  margin-bottom: 20px;
+}
+.projects a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  margin-bottom: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.projects a:hover {
+  background-color: var(--main-text-color);
+  opacity: 0.4;
+}
+
+/* Project Links Styling */
+
+.birthday {
+  background-image: url("/src/assets/images/tristan-smile.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 200px;
+  width: 600px;
+  position: relative;
+}
+
+.btext {
+  position: absolute;
+  bottom: 20%;
+  height: 50px;
+}
+
+.guard {
+  background-image: url("/src/assets/images/virtual-guardian.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.searchtext {
+  position: absolute;
+  bottom: 20%;
+  height: 50px;
+}
+
+.thank {
+  background-image: url("/src/assets/images/ThankYou.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 200px;
+  width: 600px;
+  position: relative;
+}
+
+.thanktext {
+  position: absolute;
+  bottom: 20%;
+  height: 50px;
+}
+
+
+.search {
+  background-image: url("/src/assets/images/gameSearch.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 200px;
+  width: 600px;
+  position: relative;
+}
+
+.searchtext {
+  position: absolute;
+  bottom: 20%;
+  height: 50px;
+}
+
+.run {
+  background-image: url("/src/assets/images/run.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 200px;
+  width: 600px;
+  position: relative;
+}
+
+.runtext {
+  position: absolute;
+  bottom: 20%;
+  height: 50px;
+}
+
+/* Contact Info Section */
+
+.contact-info img {
+  height: 200px;
+  width: 200px;
+}
+
+.contact-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.contact-info {
+  font-size: larger;
+  margin-bottom: 20px;
+  background-color: floralwhite;
+  color: darkslateblue;
+  display: flex;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: darkslateblue;
+  font-weight: bold;
+}
+
+/* Footer Section */
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: var(--light-text-color);
+  width: 100%;
+  padding: 40px 35px;
+  display: block;
+}
+
+footer img {
+  height: 50px;
+  width: auto;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    width: 100%;
+    margin: 15px;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .projects a {
+    flex: 1 100%;
+    text-align: center;
+  }
+
+  .thank {
+    width: 400px;
+  }
+
+  .run {
+    width: 400px;
+  }
+  .music {
+    width: 400px;
+  }
+  .hello {
+    width: 400px;
+  }
+  .birthday {
+    width: 400px;
+  }
+
+  .column-left {
+    display: none;
+  }
+  .mobile-heading {
+    display: block;
+    border-bottom: 2px solid darkslateblue;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
