@@ -3,27 +3,34 @@ import Nav from './components/Nav';
 import About from './components/About';
 import ContactForm from './components/Contact';
 import Portfolio from './components/Portfolio';
+import Footer from './components/Footer';
 
 function App() {
 
-  const [contactSelected, setContactSelected] = useState(false);
-
+  const [currentPage, handlePageChange] = useState("About");
+  const renderPage = () => {
+    switch (currentPage) {
+      case "About":
+        return <About />;
+      case "Portfolio":
+        return <Portfolio />;
+      case "Contact":
+        return <ContactForm />;
+      default:
+        return <About />;
+    }
+  };
   return (
     <div>
-      <Nav
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-      ></Nav>
-      <main>
-        {!contactSelected ? (
-          <>
-            <About></About>
-            <Portfolio></Portfolio>
-          </>
-        ) : (
-          <ContactForm></ContactForm>
-        )}
-      </main>
+
+      
+      <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+
+      <div>{renderPage(currentPage)}</div>
+      
+      <footer>
+        <Footer></Footer>
+</footer>
     </div>
   );
 }

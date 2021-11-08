@@ -40,8 +40,8 @@ function ContactForm() {
 
   return (
     <section>
-      <h1 data-testid="h1tag">Contact me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
+      <h1 id="contactform" data-testid="h1tag">Contact me</h1>
+      <form id="contact-form" className="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
@@ -60,28 +60,28 @@ function ContactForm() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">Submit</button>
+        <button data-testid="button" className="contact-button" type="submit">Submit</button>
       </form>
-      <div className="column-right">
+      <div className="contact-info">
            
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/patrick-abernathy-7a4b53161/">
                         
-                        <img src={LinkedInImage} style={{ width: "100px" }} alt="linkedin" />
+                        <img src={LinkedInImage}  alt="linkedin" />
                         <br />
                         <p>LinkedIn</p>
                     </a>
                 </li>
                 <li>
                     <a href="mailto:pat.abs@gmail.com">
-                    <img src={emailImage} style={{ width: "100px" }} alt="email" />
+                    <img src={emailImage}  alt="email" />
                         <br />
                         <p>pat.abs@gmail.com</p>
                     </a>
                 </li>
                 <li>
-                <img src={phoneImage} style={{ width: "100px" }} alt="phone" />
+                <img src={phoneImage}  alt="phone" />
                    
                     <br />
                     <p>901.550.7915</p>
